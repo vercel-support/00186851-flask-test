@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  async rewrites()
+  /*async rewrites()
   {
       return [
           {
@@ -12,7 +12,7 @@ const nextConfig = {
                   : '/api/python/',
           }
       ]
-  },
+  },*/
 }
 
 module.exports = nextConfig

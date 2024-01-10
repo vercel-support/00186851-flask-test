@@ -5,7 +5,7 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route('/api/python/hello')
-def transformShortLink():
+def hello():
     response = {}
     response['message'] = 'hello world'
     return response
