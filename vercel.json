@@ -1,14 +1,8 @@
 {
-    "builds": [
-      {
-        "src": "api/python/index.py",
-        "use": "@vercel/python"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/api/python/:path*",
-        "dest": "api/python/index.py"
-      }
-    ]
+  "rewrites": [
+    {
+      "source": "/api/python/(.*)",
+      "destination": "/api/python/index"
+    }
+  ]
 }
