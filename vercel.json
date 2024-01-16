@@ -1,8 +1,13 @@
 {
-  "rewrites": [
+  "routes": [
+    { "handle": "filesystem" },
     {
-      "source": "/api/python/(.*)",
-      "destination": "/api/python/index"
+      "src": "^/api/nodeRoute1(?:/(?<details>.+?))?$",
+      "dest": "/api/nodeRoute1/[[...details]]?details=$details"
+    },
+    {
+      "src": "^/api/nodeRoute2(?:/(?<details>.+?))?$",
+      "dest": "/api/nodeRoute2/[[...details]]?details=$details"
     }
   ]
 }
