@@ -1,13 +1,12 @@
 {
-  "routes": [
-    { "handle": "filesystem" },
-    {
-      "src": "^/api/nodeRoute1(?:/(?<details>.+?))?$",
-      "dest": "/api/nodeRoute1/[[...details]]?details=$details"
-    },
-    {
-      "src": "^/api/nodeRoute2(?:/(?<details>.+?))?$",
-      "dest": "/api/nodeRoute2/[[...details]]?details=$details"
-    }
+  "builds": [
+      {
+          "src": "api/python/**/*",
+          "use": "@vercel/python"
+      },
+      {
+          "src": "package.json",
+          "use": "@vercel/next"
+      }
   ]
 }
